@@ -6099,6 +6099,8 @@ class Si extends Mi {
       (this.map = null),
       (this.lightMap = null),
       (this.lightMapIntensity = 1),
+      (this.metalness = null),
+      (this.roughness = null),
       (this.aoMap = null),
       (this.aoMapIntensity = 1),
       (this.specularMap = null),

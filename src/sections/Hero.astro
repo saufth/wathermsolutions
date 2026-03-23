@@ -10,7 +10,10 @@ import { Button } from "@/components/ui/button"
   import LiquidBackground from "@/components/liquid-background"
 
   const app = LiquidBackground(document.getElementById("canvas"))
-  app.loadImage("/images/liquid-bg.webp")
+  await app.loadImage("/images/liquid-bg.webp")
+  app.liquidPlane.material.metalness = 0.75
+  app.liquidPlane.material.roughness = 0.25
+  app.liquidPlane.uniforms.displacementScale.value = 5
   app.setRain(false)
 </script>
 
