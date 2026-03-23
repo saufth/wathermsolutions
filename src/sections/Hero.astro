@@ -1,0 +1,79 @@
+---
+import { ArrowRight } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Image } from "astro:assets"
+
+import { Button } from "@/components/ui/button"
+---
+
+<script>
+  import LiquidBackground from "@/components/liquid-background"
+
+  const app = LiquidBackground(document.getElementById("canvas"))
+  app.loadImage("/images/liquid-bg.webp")
+  app.setRain(false)
+</script>
+
+<section>
+  <div class="relative h-dvh">
+    <div
+      class="relative z-10 mx-auto flex h-full max-w-4xl flex-col items-center justify-center gap-5 px-4 pt-12 text-center text-balance text-white md:pt-0"
+    >
+      <h1
+        class="font-heading text-4xl font-bold text-white md:text-6xl lg:text-7xl"
+      >
+        Soluciones Inteligentes de
+        <strong
+          class="bg-linear-to-t from-[#5f9f05] via-[#94ce0c] to-[#94ce0c] bg-clip-text text-transparent italic"
+        >
+          Tratamiento de Agua
+        </strong>
+      </h1>
+      <p class="text-white md:text-xl lg:text-2xl">
+        Optimiza tus procesos, <strong>reduce costos</strong> operativos y cumple
+        con las
+        <strong>normativas ambientales</strong> con tecnología avanzada en
+        <strong>tratamiento de agua</strong>.
+      </p>
+      <div class="flex flex-col justify-center gap-2 pt-5 sm:flex-row">
+        <Button
+          size="xl"
+          className="w-64 bg-transparent bg-linear-to-tr from-[#5f9f05]/80 to-[#94ce0c]/80 text-white inset-shadow-[0px_0px_3px_rgba(255,255,255,0.2)] backdrop-blur-xs hover:from-[#5f9f05]/90 hover:to-[#94ce0c]/90"
+        >
+          Solicitar consulta
+          <HugeiconsIcon icon={ArrowRight} className="ml-1" />
+        </Button>
+        <Button
+          variant="secondary"
+          size="xl"
+          className="w-64 bg-transparent text-white inset-shadow-[0px_0px_3px_rgba(255,255,255,0.2)] backdrop-blur-xs backdrop-saturate-100 hover:bg-white/5"
+        >
+          Más información
+        </Button>
+      </div>
+    </div>
+    <div class="absolute inset-0 right-0 z-0 overflow-hidden">
+      <video
+        class="relative size-full object-cover"
+        width={1920}
+        height={1080}
+        controls={false}
+        autoplay
+        muted
+        loop
+        playsinline
+        disablepictureinpicture
+        controlslist="nodownload noplaybackrate"
+      >
+        <source src="/video/lobby-hero.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!-- <img
+      src="/images/liquid-bg.webp"
+      alt=""
+      class="fixed inset-0 z-0 size-full opacity-50"
+    /> -->
+    <canvas id="canvas" class="fixed inset-0 z-0 overflow-hidden opacity-50">
+    </canvas>
+  </div>
+</section>

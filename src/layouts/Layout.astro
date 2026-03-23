@@ -1,0 +1,105 @@
+---
+import "@/styles/global.css"
+
+import { ClientRouter } from "astro:transitions"
+
+const defaultTitle = "Watherm Solutions"
+const defaultDescription =
+  "Soluciones inteligentes de tratamiento de agua para industrias que exigen más."
+
+export interface Props {
+  title?: string
+  description?: string
+}
+
+let { title, description } = Astro.props
+
+title ??= defaultTitle
+description ??= defaultDescription
+
+// const previousPage = Astro.request.headers.get('referer')
+// const isInternalNavigation = previousPage?.includes(Astro.url.origin)
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+
+    <link
+      rel="preload"
+      href="/fonts/BricolageGrotesque-VariableFont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/fonts/JunicodeVF-Roman.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="preload"
+      href="/fonts/JunicodeVF-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="watherm solutions" />
+    <meta name="author" content="Saufth" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta
+      property="og:image"
+      content="https://www.wathermsolutions.com/og.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@wathermsol" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://wathermsolutions.com/og.jpg" />
+    <meta name="twitter:image:alt" content={title} />
+    <meta name="theme-color" content="#4f1964" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Watherm Solutions",
+        "url": "https://wathermsolutions.com",
+        "description": "Soluciones inteligentes de tratamiento de agua para industrias que exigen más.",
+        "author": {
+          "@type": "Person",
+          "name": "Saufth",
+          "url": "https://github.com/saufth"
+        }
+      }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/favicon-192x192.png"
+    />
+    <link rel="apple-touch-icon" href="/favicon-180x180.png" />
+    <meta name="msapplication-TileImage" content="/favicon-270x270.png" />
+    <ClientRouter />
+  </head>
+  <body>
+    <div class="overflow-hidden">
+      <slot />
+    </div>
+  </body>
+</html>
