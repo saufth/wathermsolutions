@@ -8714,7 +8714,7 @@ class Kr extends jr {
     if (void 0 !== r)
       return (
         this.manager.itemStart(t),
-        setTimeout(() => {
+        requestAnimationFrame(() => {
           ;(e && e(r), this.manager.itemEnd(t))
         }, 0),
         r
@@ -8856,7 +8856,7 @@ class Jr extends jr {
     if (void 0 !== a) {
       if (!0 === a.complete)
         (r.manager.itemStart(t),
-          setTimeout(function () {
+          requestAnimationFrame(function () {
             ;(e && e(a), r.manager.itemEnd(t))
           }, 0))
       else {
@@ -18109,11 +18109,11 @@ class Jo {
             ;(i.forEach(function (t) {
               mt.get(t).currentProgram.isReady() && i.delete(t)
             }),
-              0 !== i.size ? setTimeout(n, 10) : e(t))
+              0 !== i.size ? requestAnimationFrame(n, 10) : e(t))
           }
           null !== ut.get("KHR_parallel_shader_compile")
             ? n()
-            : setTimeout(n, 10)
+            : requestAnimationFrame(n, 10)
         })
       }))
     let jt = null
@@ -18641,13 +18641,13 @@ class Jo {
               Nt.flush(),
               await (function (t, e, n) {
                 return new Promise(function (i, r) {
-                  setTimeout(function a() {
+                  requestAnimationFrame(function a() {
                     switch (t.clientWaitSync(e, t.SYNC_FLUSH_COMMANDS_BIT, 0)) {
                       case t.WAIT_FAILED:
                         r()
                         break
                       case t.TIMEOUT_EXPIRED:
-                        setTimeout(a, n)
+                        requestAnimationFrame(a, n)
                         break
                       default:
                         i()
@@ -18983,7 +18983,7 @@ class $o {
   }
   #v() {
     ;(this.#o && clearTimeout(this.#o),
-      (this.#o = setTimeout(this.resize.bind(this), 100)))
+      (this.#o = requestAnimationFrame(this.resize.bind(this), 100)))
   }
   resize() {
     let t, e
