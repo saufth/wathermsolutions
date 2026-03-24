@@ -1,23 +1,12 @@
 ---
+import Header from "@/sections/Header.astro"
 import Hero from "@/sections/Hero.astro"
-import { Icon } from "astro-icon/components"
-
 import Layout from "@/layouts/Layout.astro"
 ---
 
-<script>
-  import LiquidBackground from "@/components/liquid-background"
-
-  const app = LiquidBackground(document.getElementById("canvas"))
-  app.loadImage("/images/liquid-bg.webp")
-  app.setRain(false)
-</script>
-
 <Layout>
-  <div class="absolute top-0 z-50 flex h-20 w-full items-center px-4">
-    <div class="container mx-auto">
-      <Icon name="logo" class="size-12 md:size-14" />
-    </div>
-  </div>
-  <Hero />
+  <main id="main-content" tabindex="-1">
+    <Header />
+    <Hero />
+  </main>
 </Layout>
