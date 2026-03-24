@@ -1,20 +1,17 @@
 ---
 import { ArrowRight } from "@hugeicons/core-free-icons"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { Image } from "astro:assets"
 
 import { Button } from "@/components/ui/button"
 ---
 
 <script>
-  import LiquidBackground from "@/components/liquid-background"
-
-  const app = LiquidBackground(document.getElementById("canvas"))
-  await app.loadImage("/images/liquid-bg.webp")
-  app.liquidPlane.material.metalness = 0.75
-  app.liquidPlane.material.roughness = 0.25
-  app.liquidPlane.uniforms.displacementScale.value = 5
-  app.setRain(false)
+  const chckr = document.getElementById("chckr")
+  if (chckr) {
+    chckr.innerHTML = window.WebGLRenderingContext
+      ? "supported"
+      : "no-supported"
+  }
 </script>
 
 <section>
@@ -22,6 +19,7 @@ import { Button } from "@/components/ui/button"
     <div
       class="relative z-10 mx-auto flex h-full max-w-4xl flex-col items-center justify-center gap-5 px-4 pt-12 text-center text-balance text-white md:pt-0"
     >
+      <div id="chckr" class="text-center text-lg text-white"></div>
       <h1
         class="font-heading text-4xl font-bold text-white md:text-6xl lg:text-7xl"
       >
@@ -71,12 +69,12 @@ import { Button } from "@/components/ui/button"
         <source src="/video/lobby-hero.mp4" type="video/mp4" />
       </video>
     </div>
-    <!-- <img
+    <img
       src="/images/liquid-bg.webp"
       alt=""
       class="fixed inset-0 z-0 size-full opacity-50"
-    /> -->
-    <canvas id="canvas" class="fixed inset-0 z-0 overflow-hidden opacity-50">
-    </canvas>
+    />
+    <!-- <canvas id="canvas" class="fixed inset-0 z-0 overflow-hidden opacity-50">
+    </canvas> -->
   </div>
 </section>
