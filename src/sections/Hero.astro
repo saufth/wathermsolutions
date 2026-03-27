@@ -1,50 +1,54 @@
 ---
-import { Image } from "astro:assets"
-
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button" // 8de65d
 ---
 
 <section>
   <div class="relative h-dvh">
-    <div
-      class="relative z-10 mx-auto flex h-full max-w-4xl flex-col items-center justify-center gap-5 px-4 pt-12 text-center text-balance text-white md:pt-0"
-    >
-      <h1
-        class="[&>strong]:from-ws-green-b font-heading text-3xl font-bold text-white md:text-5xl lg:text-6xl [&>strong]:bg-linear-to-t [&>strong]:via-ws-green-light [&>strong]:to-ws-green-light [&>strong]:bg-clip-text [&>strong]:text-transparent [&>strong]:italic"
+    <div class="relative z-10 container h-full">
+      <div
+        class="mx-auto flex h-full max-w-4xl flex-col justify-center gap-5 pt-12 text-center text-balance text-white md:pt-0"
       >
-        <strong> Tratamiento de Agua </strong>Industrial para Optimizar Procesos
-        y <strong> Cumplir Normativas </strong>
-      </h1>
-      <p class="text-sm text-white md:text-lg lg:text-xl">
-        Diseñamos e implementamos <strong> soluciones </strong> de
-        <strong> tratamiento de agua industrial </strong> y
-        <strong> aguas residuales </strong> para empresas que requieren máxima
-        <strong> eficiencia </strong>, control operativo y
-        <strong> cumplimiento ambiental </strong>. Optimiza costos,
-        <strong> mejora la calidad del agua </strong> y asegura la continuidad de
-        tu operación con ingeniería.
-      </p>
-      <div class="flex flex-col justify-center gap-2 pt-2 sm:flex-row md:pt-5">
-        <Button
-          variant="callToAction"
-          size="xl"
-          className="hidden w-64 md:block"
+        <h1
+          class="font-heading text-3xl font-black md:text-5xl lg:text-6xl [&>strong]:text-[#8de65d] [&>strong]:italic"
         >
-          Solicitar Diagnóstico Técnico
-        </Button>
-        <Button
-          variant="liquidGlass"
-          size="xl"
-          className="hidden w-64 md:block"
+          <strong> Tratamiento de Agua </strong>Industrial para Optimizar
+          Procesos y <strong> Cumplir Normativas </strong>
+        </h1>
+        <p class="text-sm text-white md:text-lg lg:text-xl">
+          Diseñamos e implementamos <strong> soluciones </strong> de
+          <strong> tratamiento de agua industrial </strong> y
+          <strong> aguas residuales </strong> para empresas que requieren máxima
+          <strong> eficiencia </strong>, control operativo y
+          <strong> cumplimiento ambiental </strong>. Optimiza costos,
+          <strong> mejora la calidad del agua </strong> y asegura la continuidad de
+          tu operación con ingeniería.
+        </p>
+        <div
+          class="flex flex-col items-center justify-center gap-2 pt-2 sm:flex-row md:pt-5"
         >
-          Explorar Soluciones
-        </Button>
-        <Button variant="callToAction" size="lg" className="w-64 md:hidden">
-          Solicitar Diagnóstico Técnico
-        </Button>
-        <Button variant="liquidGlass" size="lg" className="w-64 md:hidden">
-          Explorar Soluciones
-        </Button>
+          <Button
+            size="xl"
+            className="hidden w-64 bg-[#5dc5e6] text-black/70 md:block"
+          >
+            Solicitar Diagnóstico Técnico
+          </Button>
+          <Button
+            variant="secondary"
+            size="xl"
+            className="hidden w-64 md:block"
+          >
+            Explorar Soluciones
+          </Button>
+          <Button
+            size="lg"
+            className="w-64 bg-[#5dc5e6] text-black/70 md:hidden"
+          >
+            Solicitar Diagnóstico Técnico
+          </Button>
+          <Button variant="secondary" size="lg" className="w-64 md:hidden">
+            Explorar Soluciones
+          </Button>
+        </div>
       </div>
     </div>
     <div class="absolute inset-0 right-0 z-0 overflow-hidden">
@@ -62,10 +66,6 @@ import { Button } from "@/components/ui/button"
       >
         <source src="/video/lobby-hero.mp4" type="video/mp4" />
       </video>
-      <div
-        class="absolute inset-0 z-0 size-full bg-radial from-ws-blue to-ws-blue-light opacity-60"
-      >
-      </div>
     </div>
   </div>
 </section>
