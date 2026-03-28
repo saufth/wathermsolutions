@@ -5,8 +5,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-[#5ce1e6] text-primary-foreground [a]:hover:bg-[#5ce1e6]/80",
+        default: "bg-primary text-primary-foreground [a]:hover:bg-primary/80",
         outline:
           "border-border hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:border-input dark:bg-input/30 dark:hover:bg-input/50",
         secondary:
@@ -16,8 +15,6 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
-        callToAction:
-          "bg-transparent bg-linear-to-tr from-ws-green/80 to-ws-green-light/80 text-white inset-shadow-xs/50 inset-shadow-white backdrop-blur-xs hover:from-ws-green hover:to-ws-green-light",
         liquidGlass:
           "bg-transparent text-white inset-shadow-xs/30 inset-shadow-white backdrop-blur-xs backdrop-saturate-100 hover:bg-white/10",
       },

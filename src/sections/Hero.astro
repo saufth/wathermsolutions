@@ -1,5 +1,5 @@
 ---
-import { Button } from "@/components/ui/button" // 8de65d
+import { Button } from "@/components/ui/button"
 ---
 
 <section>
@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button" // 8de65d
         class="mx-auto flex h-full max-w-4xl flex-col justify-center gap-5 pt-12 text-center text-balance text-white md:pt-0"
       >
         <h1
-          class="font-heading text-3xl font-black md:text-5xl lg:text-6xl [&>strong]:text-[#8de65d] [&>strong]:italic"
+          class="font-heading text-3xl font-black md:text-5xl lg:text-6xl [&>strong]:text-primary-accent [&>strong]:italic"
         >
           <strong> Tratamiento de Agua </strong>Industrial para Optimizar
           Procesos y <strong> Cumplir Normativas </strong>
@@ -26,10 +26,7 @@ import { Button } from "@/components/ui/button" // 8de65d
         <div
           class="flex flex-col items-center justify-center gap-2 pt-2 sm:flex-row md:pt-5"
         >
-          <Button
-            size="xl"
-            className="hidden w-64 bg-[#5dc5e6] text-black/70 md:block"
-          >
+          <Button size="xl" className="hidden w-64 md:block">
             Solicitar Diagnóstico Técnico
           </Button>
           <Button
@@ -39,10 +36,7 @@ import { Button } from "@/components/ui/button" // 8de65d
           >
             Explorar Soluciones
           </Button>
-          <Button
-            size="lg"
-            className="w-64 bg-[#5dc5e6] text-black/70 md:hidden"
-          >
+          <Button size="lg" className="w-64 md:hidden">
             Solicitar Diagnóstico Técnico
           </Button>
           <Button variant="secondary" size="lg" className="w-64 md:hidden">

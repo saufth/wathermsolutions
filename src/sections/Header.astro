@@ -1,24 +1,22 @@
 ---
+import { CurvyRightDirectionFreeIcons } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 import { Icon } from "astro-icon/components"
 
-import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/lib/variants"
-import { Button } from "@/components/ui/button"
 ---
 
 <header class="absolute top-0 z-50 h-24 w-full">
-  <div class="container mx-auto flex h-full items-center justify-between">
-    <Icon name="logo" class="size-12 md:size-14" />
-    <nav class="flex h-full items-center justify-end">
-      <a
-        href="#"
-        class={cn(
-          buttonVariants({ variant: "secondary" }),
-          "bg-[#5dc5e6] text-black/70"
-        )}
-      >
+  <nav class="container mx-auto flex h-full items-center justify-between">
+    <a href="/">
+      <Icon name="logo" class="size-12 md:size-14" aria-hidden />
+      <span class="sr-only">Página de inicio</span>
+    </a>
+    <div class="flex h-full items-center justify-end">
+      <a href="#" class={buttonVariants()}>
         Contáctanos
+        <HugeiconsIcon icon={CurvyRightDirectionFreeIcons} />
       </a>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
