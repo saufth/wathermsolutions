@@ -39,6 +39,8 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  /* font sizes */
+  --font-size-hero: clamp(5.625rem, 4.4799rem + 4.8214vw, 9rem);
 }
 
 .dark {
@@ -120,6 +122,8 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  /* font sizes */
+  --text-hero: var(--font-size-hero);
 }
 
 @layer base {
@@ -142,7 +146,8 @@
   @font-face {
     font-family: "Bricolage Grotesque";
     src: url("/fonts/BricolageGrotesque-VariableFont.woff2") format("woff2");
-    font-weight: normal;
+    font-weight: 100 900;
+    font-stretch: 50% 200%;
     font-style: normal;
     font-display: swap;
   }
@@ -161,6 +166,28 @@
     font-weight: normal;
     font-style: Italic;
     font-display: swap;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-1.5 w-1.5 rounded-[1ex] bg-foreground/40;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-[1ex] bg-foreground;
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-foreground;
+  }
+}
+
+@layer utilities {
+  .heading {
+    @apply font-heading leading-[0.9] tracking-tighter text-balance antialiased;
+  }
+
+  .paragraph {
+    @apply leading-[1.4] tracking-tight text-balance;
   }
 }
 

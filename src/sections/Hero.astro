@@ -1,48 +1,34 @@
 ---
 import { Icon } from "astro-icon/components"
-
-import { Button } from "@/components/ui/button"
 ---
 
 <section>
-  <div class="relative h-140.5 md:h-dvh">
+  <div class="relative h-166 md:h-dvh">
     <div class="relative z-10 container h-full">
       <div
-        class="md:pb-p0 t-0 mx-auto flex h-full max-w-4xl flex-col justify-end gap-10 pb-12 text-center text-balance text-white md:justify-center md:pt-12"
+        class="mx-auto flex h-full max-w-4xl flex-col justify-between gap-10 text-white"
       >
+        <div class="basis-1"></div>
+        <div class="basis-1"></div>
         <h1
-          class="mx-auto max-w-md text-7xl leading-[0.9] font-bold tracking-tighter md:max-w-xl md:text-9xl"
+          class="heading mx-auto max-w-4xl text-center text-hero text-balance"
         >
           Gestiona el <strong class="text-primary">Agua</strong> a tu Manera.
         </h1>
-        <!-- <p class="text-lg text-white md:text-xl">
-          Diseñamos e implementamos <strong>soluciones</strong> de
-          <strong>tratamiento de agua industrial</strong> y
-          <strong>aguas residuales</strong> para empresas que requieren máxima
-          <strong>eficiencia</strong>, control operativo y
-          <strong>cumplimiento ambiental</strong>. Optimiza costos,
-          <strong>mejora la calidad del agua</strong>.
-        </p> -->
         <div
-          class="flex flex-col items-center justify-center gap-2 pt-2 md:flex-row md:pt-5"
+          class="flex h-20 max-w-4xl items-center justify-between gap-2 rounded-full bg-white p-1.5 text-primary-foreground"
         >
-          <Button size="xl" className="hidden w-64 bg-primary-accent md:block">
-            Solicitar Diagnóstico Técnico
-          </Button>
-          <Button
-            variant="liquidGlass"
-            size="xl"
-            className="hidden w-64 md:block"
+          <span class="pl-4 font-light text-balance"
+            >Solicitar Diagnóstico Técnico
+          </span>
+          <a
+            class="flex h-full items-center rounded-full border border-foreground bg-primary-accent p-5 font-normal"
+            href="#"
           >
-            Explorar Soluciones
-          </Button>
-          <Button size="lg" className="w-64 bg-primary-accent md:hidden">
-            Solicitar Diagnóstico Técnico
-          </Button>
-          <Button variant="liquidGlass" size="lg" className="w-64 md:hidden">
-            Explorar Soluciones
-          </Button>
+            Agenda una cita
+          </a>
         </div>
+        <div class="basis-1"></div>
       </div>
     </div>
     <div class="absolute inset-0 right-0 z-0 overflow-hidden">
@@ -73,11 +59,11 @@ import { Button } from "@/components/ui/button"
     <div class="flex flex-col gap-10 lg:max-w-md xl:pt-24">
       <div>
         <h2
-          class="max-w-md text-5xl leading-[0.9] font-extrabold tracking-tighter text-balance text-primary md:text-7xl"
+          class="max-w-xs text-5xl leading-[0.9] font-extrabold tracking-tighter text-balance text-primary md:max-w-sm md:text-7xl"
         >
           Soluciones que Fluyen como Agua.
         </h2>
-        <Icon name="underline" class="mt-1" />
+        <Icon name="underline" class="mt-1 h-auto w-60 md:mt-1.5 md:w-80" />
       </div>
       <p class="text-lg text-balance text-primary-foreground">
         Tratamiento, reutilización, optimización o control total, no importa
